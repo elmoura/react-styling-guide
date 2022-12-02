@@ -12,6 +12,9 @@ const CourseInput = ({ onAddGoal }) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+
+    if (enteredValue.trim().length === 0) return;
+
     onAddGoal(enteredValue);
   };
 
